@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -10,21 +11,18 @@ class activity3 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         val binding = Activity3Binding.inflate(layoutInflater)
-        setContentView(binding.root)
 
-        binding.toSecond.setOnClickListener {
-            goToSecond()
-        }
-        binding.toFirst.setOnClickListener {
-            goToFirst()
-        }
+        binding.toSecond.setOnClickListener { goToSecond() }
+        binding.toFirst.setOnClickListener { goToFirst() }
         binding.toAbout.setOnClickListener { goToAbout() }
+        setContentView(binding.root)
     }
     private fun goToFirst() {
-        startActivity(Intent(this, activity1::class.java))
+        //startActivity(Intent(this, activity1::class.java))
+        this.setResult(Activity.RESULT_OK)
+        finish()
     }
     private fun goToSecond() {
-        setResult(activity2.SECOND)
         finish()
     }
 
