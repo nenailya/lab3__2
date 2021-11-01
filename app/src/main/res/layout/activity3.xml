@@ -6,7 +6,7 @@
     <androidx.drawerlayout.widget.DrawerLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.example.myapplication.activity3"
+        tools:context="com.example.myapplication.Fragment3"
         >
 
         <androidx.constraintlayout.widget.ConstraintLayout
