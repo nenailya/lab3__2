@@ -17,8 +17,7 @@ class activity3 : AppCompatActivity() {
         setContentView(binding.root)
     }
     private fun goToFirst() {
-        this.setResult(Activity.RESULT_OK)
-        finish()
+        startActivity(Intent(this, activity1::class.java).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
     }
     private fun goToSecond() {
         finish()

@@ -20,7 +20,7 @@ class activity2 : AppCompatActivity() {
     }
 
     private fun goToThird() {
-        startActivityForResult(Intent(this, activity3::class.java), REQUEST)
+        startActivity(Intent(this, activity3::class.java))
     }
 
     private fun goToAbout() {
@@ -31,14 +31,4 @@ class activity2 : AppCompatActivity() {
         finish()
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (resultCode == REQUEST && resultCode == Activity.RESULT_OK) {
-            finish()
-        }
-    }
-
-    companion object {
-        private const val REQUEST = 0
-    }
 }
