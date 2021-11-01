@@ -14,18 +14,20 @@
             android:exported="true"/>
         <activity
             android:name=".activity1"
-            android:exported="true"/>
-        <activity
-            android:name=".activity2"
-            android:exported="true"/>
-        <activity
-            android:name=".activity3"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity2"
+            android:exported="true"/>
+        <activity
+            android:name=".activity3"
+            android:exported="true">
+
         </activity>
     </application>
 

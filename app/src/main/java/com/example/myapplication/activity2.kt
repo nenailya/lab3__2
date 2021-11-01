@@ -3,6 +3,7 @@ package com.example.myapplication
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.Activity2Binding
 
@@ -36,6 +37,7 @@ class activity2 : AppCompatActivity() {
             finish()
         }
     }
+
     companion object {
         private const val REQUEST = 0
     }
