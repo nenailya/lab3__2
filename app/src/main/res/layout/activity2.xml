@@ -1,6 +1,8 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id = "@+id/fragment2"
+    >
 
     <data>
 
@@ -28,7 +30,7 @@
                 app:layout_constraintEnd_toEndOf="parent" />
 
             <Button
-                android:id="@+id/toFirst"
+                android:id="@+id/bnToFirst"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/to_first"
@@ -39,11 +41,11 @@
                 />
 
             <Button
-                android:id="@+id/toThird"
+                android:id="@+id/bnToThird"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/to_third"
-                app:layout_constraintTop_toTopOf="@id/toFirst"
+                app:layout_constraintTop_toTopOf="@id/bnToFirst"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

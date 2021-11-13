@@ -6,12 +6,12 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.Activity1Binding
 
-class activity1 : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = Activity1Binding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.toSecond.setOnClickListener { goToSecond() }
+        binding.bnToSecond.setOnClickListener { goToSecond() }
         binding.toAbout.setOnClickListener { goToAbout() }
     }
 

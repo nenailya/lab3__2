@@ -13,8 +13,8 @@ class activity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = Activity2Binding.inflate(layoutInflater)
 
-        binding.toFirst.setOnClickListener { goToFirst() }
-        binding.toThird.setOnClickListener { goToThird() }
+        binding.bnToFirst.setOnClickListener { goToFirst() }
+        binding.bnToThird.setOnClickListener { goToThird() }
         binding.toAbout.setOnClickListener { goToAbout() }
         setContentView(binding.root)
     }

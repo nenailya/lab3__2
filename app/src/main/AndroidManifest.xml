@@ -13,7 +13,7 @@
             android:name=".activityAbout"
             android:exported="true"/>
         <activity
-            android:name=".activity1"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,10 +23,12 @@
         </activity>
         <activity
             android:name=".activity2"
-            android:exported="true"/>
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".activity3"
-            android:exported="true">
+            android:exported="true"
+            android:parentActivityName=".activity2">
 
         </activity>
     </application>

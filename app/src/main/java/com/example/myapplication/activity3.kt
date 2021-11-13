@@ -11,8 +11,8 @@ class activity3 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = Activity3Binding.inflate(layoutInflater)
-        binding.toSecond.setOnClickListener { goToSecond() }
-        binding.toFirst.setOnClickListener { goToFirst() }
+        binding.bnToSecond.setOnClickListener { goToSecond() }
+        binding.bnToFirst.setOnClickListener { goToFirst() }
         binding.toAbout.setOnClickListener { goToAbout() }
         setContentView(binding.root)
     }
