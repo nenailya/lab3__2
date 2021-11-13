@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.ActivityAboutBinding
 
@@ -13,6 +14,7 @@ class activityAbout : AppCompatActivity() {
         binding.back.setOnClickListener {
             finish()
         }
+
     }
 
     override fun onSupportNavigateUp(): Boolean {

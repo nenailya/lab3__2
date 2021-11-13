@@ -8,6 +8,6 @@
     <string name="activity3">Activity 3</string>
     <string name="to_about">About</string>
     <string name="back">back</string>
-    <string name="nav_app_bar_navigate_up_description" />
+    <string name="nav_app_bar_navigate_up_description">Navigate up</string> />
 
 </resources>

@@ -13,8 +13,8 @@ class activity3 : AppCompatActivity() {
         val binding = Activity3Binding.inflate(layoutInflater)
         binding.bnToSecond.setOnClickListener { goToSecond() }
         binding.bnToFirst.setOnClickListener { goToFirst() }
-        binding.toAbout.setOnClickListener { goToAbout() }
         setContentView(binding.root)
+
     }
     private fun goToFirst() {
         this.setResult(Activity.RESULT_OK)
@@ -24,7 +24,4 @@ class activity3 : AppCompatActivity() {
         finish()
     }
 
-    private fun goToAbout() {
-        startActivity(Intent(this, activityAbout::class.java))
-    }
 }

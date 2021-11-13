@@ -11,15 +11,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = Activity1Binding.inflate(layoutInflater)
         setContentView(binding.root)
+        navController = (supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment).navController
+
+        val appBarConfiguration = AppBarConfiguration(navController.graph, binding.drawerLayout)
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        binding.drawerNavView.setupWithNavController(navController)
         binding.bnToSecond.setOnClickListener { goToSecond() }
-        binding.toAbout.setOnClickListener { goToAbout() }
+
     }
 
     private fun goToSecond() {
         startActivity(Intent(this, activity2::class.java))
     }
 
-    private fun goToAbout() {
-        startActivity(Intent(this, activityAbout::class.java))
-    }
+
 }

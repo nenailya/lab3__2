@@ -15,16 +15,11 @@ class activity2 : AppCompatActivity() {
 
         binding.bnToFirst.setOnClickListener { goToFirst() }
         binding.bnToThird.setOnClickListener { goToThird() }
-        binding.toAbout.setOnClickListener { goToAbout() }
         setContentView(binding.root)
     }
 
     private fun goToThird() {
         startActivityForResult(Intent(this, activity3::class.java), REQUEST)
-    }
-
-    private fun goToAbout() {
-        startActivity(Intent(this, activityAbout::class.java))
     }
 
     private fun goToFirst() {
