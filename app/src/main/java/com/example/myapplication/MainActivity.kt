@@ -29,7 +29,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.bnToSecond.setOnClickListener { goToSecond() }
 
-        navController = (supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment).navController
+        navController = (supportFragmentManager.findFragmentById(com.example.myapplication.R.id.fragmentContainerView) as NavHostFragment).navController
+
 
         val appBarConfiguration = AppBarConfiguration(navController.graph, binding.drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
