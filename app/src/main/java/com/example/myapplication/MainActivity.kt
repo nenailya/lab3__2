@@ -7,31 +7,35 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.Activity1Binding
 import com.google.android.material.navigation.NavigationView
 import android.widget.Toast
+import androidx.navigation.NavController
 
-import android.R
+
 import android.view.View
 import androidx.appcompat.widget.Toolbar
-import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.*
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.myapplication.databinding.ActivityMainBinding
+
 
 
 class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
+    private lateinit var binding: Activity1Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = Activity1Binding.inflate(layoutInflater)
+        binding = Activity1Binding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.bnToSecond.setOnClickListener { goToSecond() }
 
-        navController = (supportFragmentManager.findFragmentById(com.example.myapplication.R.id.fragmentContainerView) as NavHostFragment).navController
+        navController = (supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment).navController
 
-        val appBarConfiguration = AppBarConfiguration(navController.graph, binding.drawerLayout)
+        val appBarConfiguration = AppBarConfiguration(navController.graph, binding.drawer_layout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         binding.drawerNavView.setupWithNavController(navController)
 
