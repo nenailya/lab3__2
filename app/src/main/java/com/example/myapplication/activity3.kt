@@ -14,7 +14,6 @@ class activity3 : AppCompatActivity() {
         binding.bnToSecond.setOnClickListener { goToSecond() }
         binding.bnToFirst.setOnClickListener { goToFirst() }
         setContentView(binding.root)
-
     }
     private fun goToFirst() {
         this.setResult(Activity.RESULT_OK)

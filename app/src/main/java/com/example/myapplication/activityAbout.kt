@@ -8,13 +8,11 @@ import com.example.myapplication.databinding.ActivityAboutBinding
 class activityAbout : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         val binding = ActivityAboutBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.back.setOnClickListener {
             finish()
         }
-
     }
 
     override fun onSupportNavigateUp(): Boolean {
