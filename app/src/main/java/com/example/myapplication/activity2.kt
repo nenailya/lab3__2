@@ -50,7 +50,6 @@ class activity2 : AppCompatActivity() {
     }
 
     companion object {
-        private val THIRD = 3
+        private const val THIRD = 3
     }
-
 }

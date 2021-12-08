@@ -43,7 +43,6 @@ class activity3 : AppCompatActivity() {
     }
 
     companion object {
-        val FIRST = 1
+        const val FIRST = 1
     }
-
 }
