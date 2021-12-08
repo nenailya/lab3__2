@@ -8,6 +8,10 @@ plugins {
 android {
     compileSdk 31
 
+    testOptions {
+        animationsDisabled = true
+    }
+
     defaultConfig {
         applicationId "com.example.myapplication"
         minSdk 21
@@ -33,7 +37,10 @@ android {
     }
     buildFeatures {
         viewBinding true
-    dataBinding true
+        dataBinding true
+    }
+    testOptions {
+        unitTests.includeAndroidResources = true
     }
 }
 
