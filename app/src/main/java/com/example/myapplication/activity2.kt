@@ -20,7 +20,7 @@ class activity2 : AppCompatActivity() {
     }
 
     private fun goToThird() {
-        startActivityForResult(Intent(this, activity3::class.java), THIRD)
+        startActivity(Intent(this, activity3::class.java))
     }
 
     private fun goToFirst() {
@@ -35,21 +35,8 @@ class activity2 : AppCompatActivity() {
         return true
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == THIRD) {
-            when (resultCode) {
-                activity3.FIRST -> finish()
-            }
-        }
-    }
-
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
-    }
-
-    companion object {
-        private const val THIRD = 3
     }
 }

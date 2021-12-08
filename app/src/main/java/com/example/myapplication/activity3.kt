@@ -20,8 +20,7 @@ class activity3 : AppCompatActivity() {
     }
 
     private fun goToFirst() {
-        setResult(FIRST)
-        finish()
+        startActivity(Intent(this, MainActivity::class.java).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
     }
 
     private fun goToSecond() {
@@ -40,9 +39,5 @@ class activity3 : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
-    }
-
-    companion object {
-        const val FIRST = 1
     }
 }
